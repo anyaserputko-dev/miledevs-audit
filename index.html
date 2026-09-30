@@ -1195,10 +1195,10 @@ a.irow:hover b{text-decoration:underline}
   <p class="meta">September 2026 · lead-generation site we built, EN + RU · every point checked live on an iPhone (390×844) and on desktop, 28 Sep 2026</p>
   <nav class="toc">
     <a href="#summary">The short version</a>
-    <a href="#strong">What already works</a>
     <a href="#critical">4 first-wave</a>
-    <a href="#medium">8 second-wave</a>
-    <a href="#low">2 small fixes</a>
+    <a href="#medium">7 second-wave</a>
+    <a href="#low">1 small fix</a>
+    <a href="#strong">What already works</a>
     <a href="#price">Pricing</a>
     <a href="#questions">Questions</a>
   </nav>
@@ -1207,30 +1207,19 @@ a.irow:hover b{text-decoration:underline}
 <section class="slide" id="summary">
   <img class="silk sm" src="img/silk.png" alt="">
   <div class="shead"><h2>The short version</h2></div>
-  <p class="lead">We built this site, so we look at it from the inside. <b>The foundation holds:</b> the positioning “we are active sellers” reads in a second, ten cases carry real numbers, the team is named, the header comes back on every scroll-up with the button, and each request arrives with its source button, UTM tags and country attached — better attribution than most agency sites have.</p>
-  <p class="lead"><b>What we noticed.</b> Every button on the page leads to one form titled “Contact Us”, whose first required question is the budget; there is no email field, and after sending the window simply closes after 1.5 seconds. On a phone, once the header slides away there is no visible way to request the audit until the very bottom. The phone also downloads a 5.4 MB video and a 1.6 MB image that are never shown on it. And a handful of small things — invisible social icons, “© 2024”, an English footer opening a Russian policy — sit exactly where a visitor decides whether to write.</p>
-  <p class="lead"><b>What we propose.</b> Fourteen items in three waves. First the four that stand directly between traffic and a request: the form, the thank-you screen, a persistent mobile button, and the media the phone should not download. Then the second wave — hero copy, service hierarchy, the audit block, case buttons, footer, tap targets, tracking. Then two small fixes. No redesign: layout, copy and proof stay, we work point by point. Every figure below is ours, measured on 28 September 2026.</p>
+  <p class="lead"><b>We built this site</b>, so we look at it from the inside.</p>
+  <p class="lead"><b>What we noticed.</b> Every button leads to one “Contact Us” form that starts with the budget and has no email field; after sending, the window just closes. On a phone the request button disappears after the first screen, and the page downloads 7 MB of media it does not show.</p>
+  <p class="lead"><b>What we propose.</b> Twelve changes, each on one screen — today on the left, after on the right.</p>
   <div class="kpis" style="margin-top:34px">
     <div class="kpi"><b>4</b><span>First wave</span></div>
-    <div class="kpi"><b>8</b><span>Second wave</span></div>
-    <div class="kpi"><b>2</b><span>Small fixes</span></div>
-    <div class="kpi"><b>52 h</b><span>Dev time</span></div>
-    <div class="kpi"><b>$2,080</b><span>Fixed price</span></div>
+    <div class="kpi"><b>7</b><span>Second wave</span></div>
+    <div class="kpi"><b>1</b><span>Small fixes</span></div>
+    <div class="kpi"><b>32 h</b><span>Dev time</span></div>
+    <div class="kpi"><b>$1,280</b><span>Fixed price</span></div>
   </div>
 </section>
 
-<section class="slide" id="strong">
-  <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><h2>What already works<small>The parts we keep — and build the second stage on.</small></h2></div>
-  <div class="good">
-    <div class="gcard"><div class="ck">✓</div><h3>A header that never loses the button</h3><p>It hides while scrolling down and slides back on the first scroll up — we measured the transform going from −74 px to 0. On desktop “Book a Consultation” is always one scroll away.</p></div>
-    <div class="gcard"><div class="ck">✓</div><h3>Every request arrives with its context</h3><p>The site records which of the 6 buttons was pressed, five UTM parameters kept for the whole session, the visitor’s country and the language. Sales knows where each lead came from.</p></div>
-    <div class="gcard"><div class="ck">✓</div><h3>A request cannot get lost</h3><p>Each submission goes to three places at once — Google Sheets, a Telegram alert and the LeadFlow webhook — each with its own error handling.</p></div>
-    <div class="gcard"><div class="ck">✓</div><h3>Fast server, light code</h3><p>Netlify answers in 472 ms; the page ships 9 script files at 245 KB and zero console errors. All the weight sits in media — and that is fixable.</p></div>
-    <div class="gcard"><div class="ck">✓</div><h3>Proof and people on the page</h3><p>Ten cases with numbers across three tabs, three Shopify cases linking to the live stores, a named founder and six team members, and two full-width WhatsApp / Telegram buttons (48 px tall) in the footer.</p></div>
-    <div class="gcard"><div class="ck">✓</div><h3>Both languages wired correctly</h3><p>hreflang for en, ru and x-default, one H1, Organization schema, and all three legal pages open (200) — the “6 broken links” from the September report were a false alarm caused by the base href.</p></div>
-  </div>
-</section>
+
 
 <section class="slide divider" id="critical">
   <img class="silk" src="img/silk.png" alt="">
@@ -1244,11 +1233,11 @@ a.irow:hover b{text-decoration:underline}
   <div class="pbody">
     <div class="txt t1"><div class="lbl"><span class="pill">Today</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>All 6 “Get Free Audit” / “Book a Consultation” buttons open the same window titled <b>“Contact Us”</b>. The first field — required — is <b>“How much are you ready to invest right now?”</b>, then name, phone and a Telegram/WhatsApp handle, both required.</p><p>There is no email field and no place to paste the store or listing the visitor wants audited.</p><p class="fine-note">Verified on iPhone (390×844), 28 Sep 2026.</p></div>
     <div class="v1"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/now-form.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">Today — budget first, two required contact channels, no email</div></div></div>
-    <div class="txt t2"><div class="lbl"><span class="pill">We propose</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>Keep the same window and make it match the promise: the title becomes <b>“Get Your Free Store Audit”</b>, fields go name → email → one contact field (phone, Telegram or WhatsApp) → optional store link → budget last and optional. Button: “Get my free audit”.</p><p>On the right is <b>your own form</b> with that change and nothing else.</p></div>
+    <div class="txt t2"><div class="lbl"><span class="pill">We propose</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>Same window, matched to the promise: title <b>“Get Your Free Store Audit”</b>, fields name → email → one contact field → optional store link → budget last and optional.</p><p>On the right is <b>your own form</b> with that change and nothing else.</p></div>
     <div class="v2"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/fix-form.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">The same window — audit-first, email added, budget optional</div></div></div>
     <div class="cardcol">
       <div class="benefit-top"><span class="pill">Why it pays</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>People hand over a contact before they have thought about a budget, and you gain an email — the one channel that can actually deliver the audit and follow up if WhatsApp goes quiet.</p><div class="stats"><div><b>0</b><span>email fields on the site today</span></div><div><b>2</b><span>contact channels required at once</span></div></div><div class="comp">Like at <a href="https://resulut.com/apply-free-audit/" target="_blank" rel="noopener">RESULUT — free audit page ↗</a> — a Kyiv + US agency like AXY asks for name, email, phone/WhatsApp/Telegram and a link to the Amazon product — 9 of the 10 competitors we walked collect an email; a US brand owner rarely gives a phone to an unknown agency on the first touch.</div></div>
+      <div class="card"><p>People leave a contact before thinking about budget, and you get an email to send the audit to.</p><div class="stats"><div><b>0</b><span>email fields on the site today</span></div><div><b>2</b><span>contact channels required at once</span></div></div><div class="comp">Like at <a href="https://resulut.com/apply-free-audit/" target="_blank" rel="noopener">RESULUT — free audit page ↗</a> — a Kyiv + US agency like AXY asks for name, email, phone/WhatsApp/Telegram and a link to the Amazon product.</div></div>
       <div class="ptag"><span>Price</span><b>$240</b><em>6 h &#183; $40/h</em></div>
     </div>
   </div>
@@ -1257,13 +1246,13 @@ a.irow:hover b{text-decoration:underline}
   <img class="silk sm" src="img/silk.png" alt="">
   <div class="shead"><span class="num">02</span><h2><span class="sev crit">First wave</span>After sending, the window just closes</h2></div>
   <div class="pbody">
-    <div class="txt t1"><div class="lbl"><span class="pill">Today</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>We read the submit code rather than sending a test lead into your Telegram. On success the button turns green with <b>“✓ Sent!”</b>, the form resets and the window closes after <b>1.5 seconds</b>. No confirmation screen, no reply time, no next step, no thank-you address.</p><p>The visitor is back on the same page, unsure whether anything happened — and free to send it again.</p><p class="fine-note">Verified on iPhone (390×844), 28 Sep 2026.</p></div>
+    <div class="txt t1"><div class="lbl"><span class="pill">Today</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>On success the button shows <b>“✓ Sent!”</b> and the window closes after <b>1.5 seconds</b>.</p><p>The visitor is back on the page, unsure whether anything happened — and free to send it again.</p><p class="fine-note">Checked in the site code, 28 Sep 2026 — we did not send a test request.</p></div>
     <div class="v1"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/now-form-sent.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">The 1.5-second state, reproduced from the site code</div></div></div>
     <div class="txt t2"><div class="lbl"><span class="pill">We propose</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>Replace the flash with a <b>thank-you state in the same window</b>: what happens next in three lines, your real reply time, and a link to the cases while they wait. The same state gets its own URL so ad platforms can count it as a conversion.</p></div>
     <div class="v2"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/fix-thanks.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">The same window, replaced by a thank-you screen</div></div></div>
     <div class="cardcol">
       <div class="benefit-top"><span class="pill">Why it pays</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>The person knows the request arrived and when to expect you; you stop getting duplicates and get a conversion event you can optimise ads on.</p><div class="stats"><div><b>1.5 s</b><span>the confirmation is visible today</span></div><div><b>0</b><span>next steps offered after sending</span></div></div><div class="comp">Like at <a href="https://unitix.pro/contact" target="_blank" rel="noopener">UNITIX — contact page ↗</a> — three lines under the form (“you send this → a specialist reads it → you get a reply or a time”) and a 24-hour promise — 6 of 10 competitors state what happens after the request; for a US lead in another time zone this replaces a day of waiting for a Telegram message.</div></div>
+      <div class="card"><p>The person knows the request arrived and when to expect you; you stop getting duplicates and get a conversion event you can optimise ads on.</p><div class="stats"><div><b>1.5 s</b><span>the confirmation is visible today</span></div><div><b>0</b><span>next steps offered after sending</span></div></div><div class="comp">Like at <a href="https://unitix.pro/contact" target="_blank" rel="noopener">UNITIX — contact page ↗</a> — three lines under the form (“you send this → a specialist reads it → you get a reply or a time”) and a 24-hour promise.</div></div>
       <div class="ptag"><span>Price</span><b>$120</b><em>3 h &#183; $40/h</em></div>
     </div>
   </div>
@@ -1272,20 +1261,20 @@ a.irow:hover b{text-decoration:underline}
   <img class="silk sm" src="img/silk.png" alt="">
   <div class="shead"><span class="num">03</span><h2><span class="sev crit">First wave</span>On a phone, the request button disappears after the first screen</h2></div>
   <div class="pbody">
-    <div class="txt t1"><div class="lbl"><span class="pill">Today</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>The mobile header holds only the logo and a burger — “Book a Consultation” sits inside the menu. Once the visitor scrolls, the header slides away. We scrolled to <b>3,000 px</b> (the cases): the header is off-screen and <b>zero</b> request buttons are visible.</p><p>The next one appears at the “Get a Free Audit” block, near the bottom of a 7,898 px page.</p><p class="fine-note">Verified on iPhone (390×844), 28 Sep 2026.</p></div>
+    <div class="txt t1"><div class="lbl"><span class="pill">Today</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>Once the visitor scrolls, the header with the menu slides away.</p><p>At <b>3,000 px</b> (the cases) no request button is visible; the next one is near the bottom of a <b>7,898 px</b> page.</p><p class="fine-note">Verified on iPhone (390×844), 28 Sep 2026.</p></div>
     <div class="v1"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/now-midpage.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">Mid-page today — cases, no button in sight</div></div></div>
     <div class="txt t2"><div class="lbl"><span class="pill">We propose</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>Add a slim <b>bottom bar with the same “Get Free Audit” button</b> on mobile, hidden only while the form or the audit block is on screen. Same button, same colours — just always reachable.</p></div>
     <div class="v2"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/fix-midpage-bar.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">The same frame with the bottom bar</div></div></div>
     <div class="cardcol">
       <div class="benefit-top"><span class="pill">Why it pays</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Most of your paid traffic from TikTok and Meta lands on a phone. Today it reads the cases and has to hunt for the button; with the bar the next tap is always one thumb away.</p><div class="stats"><div><b>0</b><span>request buttons visible mid-page</span></div><div><b>7,898 px</b><span>page height on a phone</span></div></div><div class="comp">Like at <a href="https://www.primeteam.agency/" target="_blank" rel="noopener">Prime Team — sticky “Free account audit” ↗</a> — the audit button stays in the header on every page and every scroll; AXY’s traffic from TikTok and Meta is mobile, where your button currently disappears with the header.</div></div>
+      <div class="card"><p>Most of your paid traffic from TikTok and Meta lands on a phone. Today it reads the cases and has to hunt for the button; with the bar the next tap is always one thumb away.</p><div class="stats"><div><b>0</b><span>request buttons visible mid-page</span></div><div><b>7,898 px</b><span>page height on a phone</span></div></div><div class="comp">Like at <a href="https://www.primeteam.agency/" target="_blank" rel="noopener">Prime Team — sticky “Free account audit” ↗</a> — the audit button stays in the header on every page and every scroll.</div></div>
       <div class="ptag"><span>Price</span><b>$120</b><em>3 h &#183; $40/h</em></div>
     </div>
   </div>
 </section>
 <section class="slide" id="p04">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">04</span><h2><span class="sev crit">First wave</span>The phone downloads 7 MB of media it never shows</h2></div>
+  <div class="shead"><span class="num">04</span><h2><span class="sev crit">First wave</span>The phone downloads 7 MB of media it does not show</h2></div>
   <div class="pbody">
     <div class="txt t1"><div class="lbl"><span class="pill">Today</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>The hero video and the large hero image live in a block marked <b>hidden on screens under 1024 px</b> — on a phone both render at 0×0. Yet the network log shows the phone fetching <b>banner.mp4 (5.4 MB)</b> and <b>image.png (1.6 MB)</b> in full.</p><p>So the mobile visitor pays for the heaviest assets on the site and sees a text-only first screen.</p><p class="fine-note">Verified on iPhone (390×844), 28 Sep 2026.</p></div>
     <div class="v1"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/now-hero.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">Today — text only, 7 MB loading in the background</div></div></div>
@@ -1293,7 +1282,7 @@ a.irow:hover b{text-decoration:underline}
     <div class="v2"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/fix-hero-visual.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">The same screen with a light frame from your own video</div></div></div>
     <div class="cardcol">
       <div class="benefit-top"><span class="pill">Why it pays</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>The first screen appears faster on exactly the connection your ads are seen on, and the phone gets the product visual the desktop already has.</p><div class="stats"><div><b>5.4 MB</b><span>video fetched and never shown on mobile</span></div><div><b>1.6 MB</b><span>image fetched and never shown</span></div></div></div>
+      <div class="card"><p>The first screen appears faster on exactly the connection your ads are seen on, and the phone gets the product visual the desktop already has.</p><div class="stats"><div><b>5.4 MB</b><span>video fetched but not shown on mobile</span></div><div><b>1.6 MB</b><span>image fetched but not shown</span></div></div></div>
       <div class="ptag"><span>Price</span><b>$120</b><em>3 h &#183; $40/h</em></div>
     </div>
   </div>
@@ -1301,7 +1290,7 @@ a.irow:hover b{text-decoration:underline}
 <section class="slide divider" id="medium">
   <img class="silk" src="img/silk.png" alt="">
   <span class="sev imp">Second wave</span>
-  <h2>8 changes<br>to clarity and trust</h2>
+  <h2>7 changes<br>to clarity and trust</h2>
 </section>
 <section class="slide" id="p05">
   <img class="silk sm" src="img/silk.png" alt="">
@@ -1313,7 +1302,7 @@ a.irow:hover b{text-decoration:underline}
     <div class="v2"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/fix-hero-chips.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">The same screen — three chips, one line</div></div></div>
     <div class="cardcol">
       <div class="benefit-top"><span class="pill">Why it pays</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>A visitor recognises “that one is me” in a glance instead of reading, and reaches the button sooner.</p><div class="stats"><div><b>51 words</b><span>in the sub-headline today</span></div><div><b>3 chips</b><span>instead of three sentences</span></div></div><div class="comp">Like at <a href="https://launchtiktokshop.org/" target="_blank" rel="noopener">Viral Brand Works — three scenario cards ↗</a> — the same three situations AXY lists in one paragraph (“not on TikTok Shop yet / live but flat / scaling”) are three cards with their own buttons — 3 of 10 competitors split the entry this way, and it fits AXY’s three budgets and three service lines.</div></div>
+      <div class="card"><p>A visitor recognises “that one is me” in a glance instead of reading, and reaches the button sooner.</p><div class="stats"><div><b>51 words</b><span>in the sub-headline today</span></div><div><b>3 chips</b><span>instead of three sentences</span></div></div><div class="comp">Like at <a href="https://launchtiktokshop.org/" target="_blank" rel="noopener">Viral Brand Works — three scenario cards ↗</a> — the same three situations AXY lists in one paragraph (“not on TikTok Shop yet / live but flat / scaling”) are three cards with their own buttons.</div></div>
       <div class="ptag"><span>Price</span><b>$120</b><em>3 h &#183; $40/h</em></div>
     </div>
   </div>
@@ -1328,14 +1317,14 @@ a.irow:hover b{text-decoration:underline}
     <div class="v2"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/fix-services.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">The same grid — three flagships with a case line</div></div></div>
     <div class="cardcol">
       <div class="benefit-top"><span class="pill">Why it pays</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>The visitor sees where to start and what it leads to before opening anything — and your strongest cases get read in the services block, not only in the cases tab.</p><div class="stats"><div><b>10</b><span>cards with equal weight today</span></div><div><b>0</b><span>cards with an outcome or price line</span></div></div><div class="comp">Like at <a href="https://triviumco.com/case-studies/" target="_blank" rel="noopener">Trivium — case studies ↗</a> — each flagship service is backed by one before → after number ($18K → $165K/month) right where the service is sold — AXY already has such numbers in its cases; they just never appear next to the services.</div></div>
+      <div class="card"><p>The visitor sees where to start and what it leads to before opening anything — and your strongest cases get read in the services block, not only in the cases tab.</p><div class="stats"><div><b>10</b><span>cards with equal weight today</span></div><div><b>0</b><span>cards with an outcome or price line</span></div></div><div class="comp">Like at <a href="https://triviumco.com/case-studies/" target="_blank" rel="noopener">Trivium — case studies ↗</a> — each flagship service is backed by one before → after number ($18K → $165K/month) right where the service is sold.</div></div>
       <div class="ptag"><span>Price</span><b>$200</b><em>5 h &#183; $40/h</em></div>
     </div>
   </div>
 </section>
 <section class="slide" id="p07">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">07</span><h2><span class="sev imp">Second wave</span>“Free audit” is never explained where it is asked for</h2></div>
+  <div class="shead"><span class="num">07</span><h2><span class="sev imp">Second wave</span>“Free audit” is not explained where it is asked for</h2></div>
   <div class="pbody">
     <div class="txt t1"><div class="lbl"><span class="pill">Today</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>The closing block says “Fill out the form and our experts will contact you” — nothing about what the audit contains, what you get back or on what terms. The three scenarios that do explain it are only in the hero — this block starts at 6,494 px on a phone.</p><p class="fine-note">Verified on iPhone (390×844), 28 Sep 2026.</p></div>
     <div class="v1"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/now-audit.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">Today — heading, two sentences, button</div></div></div>
@@ -1343,7 +1332,7 @@ a.irow:hover b{text-decoration:underline}
     <div class="v2"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/fix-audit.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">The same block with what’s included and a trust line</div></div></div>
     <div class="cardcol">
       <div class="benefit-top"><span class="pill">Why it pays</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>The warmest visitors — the ones who scrolled to the end — get concrete reasons to press the button right where it is.</p><div class="stats"><div><b>3 lines</b><span>of what the audit includes</span></div><div><b>1</b><span>trust line under the button</span></div></div><div class="comp">Like at <a href="https://www.primeteam.agency/contact" target="_blank" rel="noopener">Prime Team — “what the audit includes” ↗</a> — a six-point list of what the free audit covers sits next to the form — 6 of 10 competitors explain the audit where they ask for it; AXY’s form opens with a budget question instead.</div></div>
+      <div class="card"><p>The warmest visitors — the ones who scrolled to the end — get concrete reasons to press the button right where it is.</p><div class="stats"><div><b>3 lines</b><span>of what the audit includes</span></div><div><b>1</b><span>trust line under the button</span></div></div><div class="comp">Like at <a href="https://www.primeteam.agency/contact" target="_blank" rel="noopener">Prime Team — “what the audit includes” ↗</a> — a six-point list of what the free audit covers sits next to the form.</div></div>
       <div class="ptag"><span>Price</span><b>$120</b><em>3 h &#183; $40/h</em></div>
     </div>
   </div>
@@ -1367,7 +1356,7 @@ a.irow:hover b{text-decoration:underline}
   <img class="silk sm" src="img/silk.png" alt="">
   <div class="shead"><span class="num">09</span><h2><span class="sev imp">Second wave</span>The social icons in the footer are gone</h2></div>
   <div class="pbody">
-    <div class="txt t1"><div class="lbl"><span class="pill">Today</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>The footer links to LinkedIn, Instagram and Facebook — but the three icons render at <b>0×0 px</b>. The cause: the icon library is loaded as “latest” and its newer versions dropped brand icons, so the placeholders never turn into pictures.</p><p>An agency selling social growth shows no social links of its own.</p><p class="fine-note">Verified on iPhone (390×844), 28 Sep 2026.</p></div>
+    <div class="txt t1"><div class="lbl"><span class="pill">Today</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>The footer links to LinkedIn, Instagram and Facebook — but the three icons render at <b>0×0 px</b>. The cause: the icon library is loaded as “latest” and its newer versions dropped brand icons, so the placeholders do not turn into pictures.</p><p>An agency selling social growth shows no social links of its own.</p><p class="fine-note">Verified on iPhone (390×844), 28 Sep 2026.</p></div>
     <div class="v1"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/now-footer.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">Today — a gap where the icons should be</div></div></div>
     <div class="txt t2"><div class="lbl"><span class="pill">We propose</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>Draw the three icons with Font Awesome, which the page already loads, at a 44 px tap size — and pin the icon library version so it cannot change under you again.</p></div>
     <div class="v2"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/fix-footer-icons.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">The same footer with the three icons back</div></div></div>
@@ -1408,28 +1397,15 @@ a.irow:hover b{text-decoration:underline}
     </div>
   </div>
 </section>
-<section class="slide" id="p12">
-  <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">12</span><h2><span class="sev imp">Second wave</span>Tracking and follow-up after the request</h2></div>
-  <p class="lead">We read every tag and every network request on the page. What is in place is solid; four things would let you measure and reuse the traffic you already pay for.</p>
-  <div class="tmap">
-    <div class="t ok"><b>Meta Pixel, GTM and Clarity are live</b><span>Pixel 1285343753046437 fires a Lead on submit, GTM-WR5634BL loads GA4, Microsoft Clarity records sessions. The base is there.</span><em>keep</em></div>
-    <div class="t"><b>Google receives no lead event from the site code</b><span>The only conversion call in the code is Meta’s. Whether a GTM tag forwards the lead to GA4 or Google Ads we cannot see from outside — we need a look inside the container. If not, one dataLayer push on the thank-you state closes it.</span><em>3 h · $120</em></div>
-    <div class="t"><b>No TikTok pixel</b><span>TikTok Shop is a headline service and a whole cases tab, yet the page makes zero requests to TikTok. Traffic from TikTok cannot be retargeted or optimised.</span><em>1 h · $40</em></div>
-    <div class="t mid"><b>Two Clarity projects record every session</b><span>Tags vtlc6avxzj and wqhxb45k2d both load, so heatmaps are split across two dashboards. Keep one.</span><em>1 h · $40</em></div>
-    <div class="t"><b>No email, so no follow-up</b><span>Once slide 01 adds an email field: a confirmation with the audit scope, the audit itself, and a reminder with a case a few days later. Service choice (Brevo, Klaviyo, Mailchimp) is yours.</span><em>6 h · $240</em></div>
-    <div class="t ok"><b>What we keep</b><span>Source button, five UTM parameters, country and language on every lead; Sheets + Telegram + webhook delivery.</span><em>keep</em></div>
-  </div>
-  <div class="ptag" style="margin-top:24px;max-width:320px"><span>Price</span><b>$440</b><em>11 h &#183; $40/h</em></div>
-</section>
+
 <section class="slide divider" id="low">
   <img class="silk" src="img/silk.png" alt="">
-  <span class="sev low">Small fixes</span>
-  <h2>2 items<br>of housekeeping</h2>
+  <span class="sev low">Small fix</span>
+  <h2>1 item<br>of housekeeping</h2>
 </section>
 <section class="slide" id="p13">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">13</span><h2><span class="sev low">Small fix</span>The footer still says © 2024</h2></div>
+  <div class="shead"><span class="num">12</span><h2><span class="sev low">Small fix</span>The footer still says © 2024</h2></div>
   <div class="pbody">
     <div class="txt t1"><div class="lbl"><span class="pill">Today</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>The copyright line reads <b>“© 2024 AXY Marketing”</b> — two years behind, and it sits directly above the contact buttons where a visitor decides whether the business is still active.</p><p class="fine-note">Verified on iPhone (390×844), 28 Sep 2026.</p></div>
     <div class="v1"><div><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/now-footer.jpg" alt=""></div><div class="url"><span>axyglobal.com</span></div></div></div><div class="cap">Today — © 2024</div></div></div>
@@ -1442,33 +1418,31 @@ a.irow:hover b{text-decoration:underline}
     </div>
   </div>
 </section>
-<section class="slide" id="p14">
+
+<section class="slide" id="strong">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">14</span><h2><span class="sev low">Small fix</span>Technical housekeeping</h2></div>
-  <p class="lead">Nothing here is visible to a visitor on its own, so we group it into one item. All six were checked live today.</p>
-  <div class="tmap">
-    <div class="t mid"><b>The English page points Google to the redirect page</b><span>/en/ declares canonical https://axyglobal.com/ — the empty redirect — while /ru/ correctly points to itself. Set /en/ to itself.</span><em>1 h · $40</em></div>
-    <div class="t mid"><b>No robots.txt and no sitemap.xml</b><span>Both return 404. A two-language sitemap helps Google pair the pages correctly.</span><em>1 h · $40</em></div>
-    <div class="t mid"><b>The logo sends Russian visitors to the English page</b><span>The logo link is “#”, which resolves to the root and its redirect to /en/. We clicked it on /ru/ and landed on /en/. Point it to the current language.</span><em>1 h · $40</em></div>
-    <div class="t mid"><b>Escape closes none of the three windows</b><span>Case, service and form windows ignore the Escape key; only the reviews lightbox handles it. Add Escape and keep focus inside the window.</span><em>2 h · $80</em></div>
-    <div class="t mid"><b>41 of 51 images load immediately</b><span>Only 10 use lazy loading, so reviews and team photos far below the fold download with the first screen.</span><em>1 h · $40</em></div>
-    <div class="t mid"><b>Styles are compiled in the browser on every visit</b><span>The page loads the Tailwind Play CDN — a development tool that generates CSS at runtime. Compile once at build time.</span><em>3 h · $120</em></div>
+  <div class="shead"><h2>What already works<small>The parts we keep — and build the second stage on.</small></h2></div>
+  <div class="good">
+    <div class="gcard"><div class="ck">✓</div><h3>A header that never loses the button</h3><p>It hides while scrolling down and slides back on the first scroll up — we measured the transform going from −74 px to 0.</p></div>
+    <div class="gcard"><div class="ck">✓</div><h3>Every request arrives with its context</h3><p>The site records which of the 6 buttons was pressed, five UTM parameters kept for the whole session, the visitor’s country and the language.</p></div>
+    <div class="gcard"><div class="ck">✓</div><h3>A request cannot get lost</h3><p>Each submission goes to three places at once — Google Sheets, a Telegram alert and the LeadFlow webhook — each with its own error handling.</p></div>
+    <div class="gcard"><div class="ck">✓</div><h3>Fast server, light code</h3><p>Netlify answers in 472 ms; the page ships 9 script files at 245 KB and zero console errors.</p></div>
+    <div class="gcard"><div class="ck">✓</div><h3>Proof and people on the page</h3><p>Ten cases with numbers across three tabs, three Shopify cases linking to the live stores, a named founder and six team members, and two full-width WhatsApp / Telegram buttons (48 px tall) in the footer.</p></div>
+    <div class="gcard"><div class="ck">✓</div><h3>Both languages wired correctly</h3><p>hreflang for en, ru and x-default, one H1, Organization schema, and all three legal pages open (200) — the “6 broken links” from the September report were a false alarm caused by the base href.</p></div>
   </div>
-  <div class="ptag" style="margin-top:24px;max-width:320px"><span>Price</span><b>$360</b><em>9 h &#183; $40/h</em></div>
 </section>
+
 <section class="slide" id="price">
   <img class="silk sm" src="img/silk.png" alt="">
   <div class="shead"><h2>Time and price<small>Development hours at a fixed $40/hour. One row per slide; the price of each item is on its slide.</small></h2></div>
   <div class="pcol">
-    <div class="plist"><h4><span class="sev crit">First wave</span>First wave — on the path to a request</h4><div class="prow"><i>01</i><span>The form opens with a budget question and has no email field</span><em>6 h</em><b>$240</b></div><div class="prow"><i>02</i><span>After sending, the window just closes</span><em>3 h</em><b>$120</b></div><div class="prow"><i>03</i><span>On a phone, the request button disappears after the first screen</span><em>3 h</em><b>$120</b></div><div class="prow"><i>04</i><span>The phone downloads 7 MB of media it never shows</span><em>3 h</em><b>$120</b></div><div class="ptotal"><span>Subtotal</span><span>15 h · $600</span></div></div>
-    <div class="plist"><h4><span class="sev imp">Second wave</span>Second wave — clarity and trust</h4><div class="prow"><i>05</i><span>The hero explains three scenarios in one dense paragraph</span><em>3 h</em><b>$120</b></div><div class="prow"><i>06</i><span>Ten services carry the same weight</span><em>5 h</em><b>$200</b></div><div class="prow"><i>07</i><span>“Free audit” is never explained where it is asked for</span><em>3 h</em><b>$120</b></div><div class="prow"><i>08</i><span>The case button is invisible on touch screens</span><em>1 h</em><b>$40</b></div><div class="prow"><i>09</i><span>The social icons in the footer are gone</span><em>1 h</em><b>$40</b></div><div class="prow"><i>10</i><span>The English footer opens a Russian privacy policy</span><em>1 h</em><b>$40</b></div><div class="prow"><i>11</i><span>13 of 21 tappable elements are under 44 px</span><em>2 h</em><b>$80</b></div><div class="prow"><i>12</i><span>Tracking and follow-up after the request</span><em>11 h</em><b>$440</b></div><div class="ptotal"><span>Subtotal</span><span>27 h · $1,080</span></div></div>
-    <div class="plist"><h4><span class="sev low">Small fix</span>Small fixes</h4><div class="prow"><i>13</i><span>The footer still says © 2024</span><em>1 h</em><b>$40</b></div><div class="prow"><i>14</i><span>Technical housekeeping</span><em>9 h</em><b>$360</b></div><div class="ptotal"><span>Subtotal</span><span>10 h · $400</span></div></div>
+    <div class="plist"><h4><span class="sev crit">First wave</span>First wave — on the path to a request</h4><div class="prow"><i>01</i><span>The form opens with a budget question and has no email field</span><em>6 h</em><b>$240</b></div><div class="prow"><i>02</i><span>After sending, the window just closes</span><em>3 h</em><b>$120</b></div><div class="prow"><i>03</i><span>On a phone, the request button disappears after the first screen</span><em>3 h</em><b>$120</b></div><div class="prow"><i>04</i><span>The phone downloads 7 MB of media it does not show</span><em>3 h</em><b>$120</b></div><div class="ptotal"><span>Subtotal</span><span>15 h · $600</span></div></div><div class="plist"><h4><span class="sev imp">Second wave</span>Second wave — clarity and trust</h4><div class="prow"><i>05</i><span>The hero explains three scenarios in one dense paragraph</span><em>3 h</em><b>$120</b></div><div class="prow"><i>06</i><span>Ten services carry the same weight</span><em>5 h</em><b>$200</b></div><div class="prow"><i>07</i><span>“Free audit” is not explained where it is asked for</span><em>3 h</em><b>$120</b></div><div class="prow"><i>08</i><span>The case button is invisible on touch screens</span><em>1 h</em><b>$40</b></div><div class="prow"><i>09</i><span>The social icons in the footer are gone</span><em>1 h</em><b>$40</b></div><div class="prow"><i>10</i><span>The English footer opens a Russian privacy policy</span><em>1 h</em><b>$40</b></div><div class="prow"><i>11</i><span>13 of 21 tappable elements are under 44 px</span><em>2 h</em><b>$80</b></div><div class="ptotal"><span>Subtotal</span><span>16 h · $640</span></div></div><div class="plist"><h4><span class="sev low">Small fix</span>Small fixes</h4><div class="prow"><i>12</i><span>The footer still says © 2024</span><em>1 h</em><b>$40</b></div><div class="ptotal"><span>Subtotal</span><span>1 h · $40</span></div></div>
   </div>
   <div class="pbox" style="margin-top:30px">
     <p>Total estimate</p>
-    <div class="sum">52 h &#183; $2,080</div>
+    <div class="sum">32 h &#183; $1,280</div>
     <p>Fixed price for development, at $40 per hour.</p>
-    <div class="terms"><span>First wave — 15 h</span><span>Second wave — 27 h</span><span>Small fixes — 10 h</span></div>
+    <div class="terms"><span>First wave — 15 h</span><span>Second wave — 16 h</span><span>Small fix — 1 h</span></div>
   </div>
   <p class="fine" style="margin-top:22px">Development only. Content from your side (client names and permissions for the cases, real reply time, copy for emails) and third-party subscriptions (email service, TikTok Ads account) are not included.</p>
 </section>
@@ -1484,13 +1458,13 @@ a.irow:hover b{text-decoration:underline}
   <img class="silk sm" src="img/silk.png" alt="">
   <div class="shead"><h2>Questions before we start<small>Things we could not verify from outside, or that need your decision.</small></h2></div>
   <ul class="qlist">
-    <li><i>01</i><span><b>GTM container GTM-WR5634BL.</b> Does any tag forward the lead to GA4 (G-5CBQT3ZJFR) or Google Ads? The site code itself only calls Meta. We need a view of the container to answer slide 12 precisely.</span></li>
-    <li><i>02</i><span><b>Where the requests live.</b> Each one goes to Google Sheets, Telegram and the LeadFlow webhook — which of these is the system of record, who replies, and what is the real reply time we can print on the site?</span></li>
-    <li><i>03</i><span><b>Speed score.</b> Google’s PageSpeed API refused every request today (daily quota). Our in-browser figures on a fast connection: first paint 1.26 s, full load 5.3 s. We will re-run the official score before work starts.</span></li>
-    <li><i>04</i><span><b>Names in the cases and an external review profile.</b> Seven Amazon and TikTok cases are labelled by category only; we found no AXY profile on Clutch, Trustpilot or Google today. Which clients may be named, and is there a review profile we should link?</span></li>
-    <li><i>05</i><span><b>The Russian version.</b> Should the same changes ship on /ru/ at the same time? The two pages share the code, so most items carry over at little extra cost.</span></li>
-    <li><i>06</i><span><b>Email service.</b> For the follow-up sequence on slide 12 — Brevo, Klaviyo or Mailchimp, and who holds the subscription.</span></li>
-    <li><i>07</i><span><b>Contact and decision-maker.</b> Team Pro holds no call notes for AXY; requests so far came through Ivan. Who signs off on this plan?</span></li>
+    
+    <li><i>01</i><span><b>Where the requests live.</b> Each one goes to Google Sheets, Telegram and the LeadFlow webhook — which of these is the system of record, who replies, and what is the real reply time we can print on the site?</span></li>
+    <li><i>02</i><span><b>Speed score.</b> Google’s PageSpeed API refused every request today (daily quota).</span></li>
+    <li><i>03</i><span><b>Names in the cases and an external review profile.</b> Seven Amazon and TikTok cases are labelled by category only; we found no AXY profile on Clutch, Trustpilot or Google today.</span></li>
+    <li><i>04</i><span><b>The Russian version.</b> Should the same changes ship on /ru/ at the same time?</span></li>
+    
+    <li><i>05</i><span><b>Contact and decision-maker.</b> Team Pro holds no call notes for AXY; requests so far came through Ivan.</span></li>
   </ul>
 </section>
 
@@ -1499,7 +1473,7 @@ a.irow:hover b{text-decoration:underline}
   <img src="img/logo-md.png" alt="MileDevs">
   <h2>Next step</h2>
   <p>We agree on the first wave and start there — the form, the thank-you state, the mobile button and the media the phone should not download. 15 hours of work, and it is the part that changes how many requests you get from the same traffic.</p>
-  <p class="fine">Every figure in this document was measured live on axyglobal.com on 28 September 2026 — iPhone viewport 390×844 and desktop 1440×900, network requests, tags and DOM read in the browser, submit behaviour read from the site’s own code (no test request was sent). The “We propose” screens are your own page with one element changed; they are illustrative, not final design.</p>
+  <p class="fine">Every figure was measured live on axyglobal.com on 28 September 2026; the “We propose” screens are your own pages with one element changed.</p>
 </section>
 </body>
 </html>
