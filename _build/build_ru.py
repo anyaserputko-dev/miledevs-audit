@@ -24,13 +24,17 @@ def phone(img, cap, url='axyglobal.com'):
             '<div class="view"><img class="shot" src="img/%s" alt=""></div>'
             '<div class="url"><span>%s</span></div></div></div><div class="cap">%s</div></div>' % (SB, img, url, cap))
 
-def money(n): return '$' + format(n, ',')
+def money(n):
+    n = int(n) if float(n).is_integer() else n
+    return '$' + format(n, ',')
+def fh(h):
+    return str(int(h)) if float(h).is_integer() else str(h).replace('.', ',')
 
 ROWS = []
 def slide(sid, num, sev, sevlab, title, today, propose, now, fix, benefit, s1, s2, comp='', hours=None, price_html=None, note=CHECKED):
     if hours is not None:
         ROWS.append((sev, num, title, hours))
-        price_html = '<div class="ptag"><span>Цена</span><b>%s</b><em>%s ч &#183; $%s/ч</em></div>' % (money(hours * RATE), hours, RATE)
+        price_html = '<div class="ptag"><span>Цена</span><b>%s</b><em>%s ч &#183; $%s/ч</em></div>' % (money(hours * RATE), fh(hours), RATE)
     c = '<div class="comp">%s</div>' % comp if comp else ''
     return f'''
 <section class="slide" id="{sid}">
@@ -140,7 +144,7 @@ S.append(slide('p13', '09', *SM, 'В футере до сих пор © 2024',
   ('fix-footer-year.jpg', 'Тот же футер с текущим годом'),
   'Сайт перестаёт выглядеть заброшенным в том месте, куда смотрят перед тем, как написать.',
   ('2024', 'год на сайте сейчас'), ('1 строка', 'кода, навсегда'),
-  hours=1))
+  hours=0.5))
 S.append(divider('extra', 'extra', 'Отдельно', 'Блог-постинг<br>для поискового трафика'))
 BLOG_PRICE = ('<div class="ptag"><span>Цена</span><b>$750 <small>+ $30/мес</small></b>'
               '<em>Настройка один раз · первый год $1,110 — около $3 за статью</em></div>')
@@ -158,10 +162,10 @@ S.append(slide('blog', '10', 'extra', 'Отдельно', 'На сайте не�
 def tot(sev): return sum(h for s, n, t, h in ROWS if s == sev)
 h1, h2, h3 = tot('crit'), tot('imp'), tot('low'); H = h1 + h2 + h3
 def plist(sev, lab, head_txt):
-    rows = ''.join('<div class="prow"><i>%s</i><span>%s</span><em>%s ч</em><b>%s</b></div>' % (n, t, h, money(h * RATE)) for s, n, t, h in ROWS if s == sev)
+    rows = ''.join('<div class="prow"><i>%s</i><span>%s</span><em>%s ч</em><b>%s</b></div>' % (n, t, fh(h), money(h * RATE)) for s, n, t, h in ROWS if s == sev)
     hh = tot(sev)
     return ('<div class="plist"><h4><span class="sev %s">%s</span>%s</h4>%s<div class="ptotal"><span>Итого</span><span>%s ч · %s</span></div></div>'
-            % (sev, lab, head_txt, rows, hh, money(hh * RATE)))
+            % (sev, lab, head_txt, rows, fh(hh), money(hh * RATE)))
 
 n_items = len(ROWS)
 cover = f'''<body>
@@ -192,7 +196,7 @@ cover = f'''<body>
     <div class="kpi"><b>4</b><span>Первая волна</span></div>
     <div class="kpi"><b>4</b><span>Вторая волна</span></div>
     <div class="kpi"><b>1</b><span>Мелкая правка</span></div>
-    <div class="kpi"><b>{H} ч</b><span>Разработка</span></div>
+    <div class="kpi"><b>{fh(H)} ч</b><span>Разработка</span></div>
     <div class="kpi"><b>{money(H*RATE)}</b><span>Фиксированная цена</span></div>
   </div>
 </section>
@@ -222,9 +226,9 @@ price = f'''
   </div>
   <div class="pbox" style="margin-top:30px">
     <p>Итого по правкам</p>
-    <div class="sum">{H} ч &#183; {money(H*RATE)}</div>
+    <div class="sum">{fh(H)} ч &#183; {money(H*RATE)}</div>
     <p>Фиксированная цена разработки, $20 в час.</p>
-    <div class="terms"><span>Первая волна — {h1} ч</span><span>Вторая волна — {h2} ч</span><span>Мелкая правка — {h3} ч</span></div>
+    <div class="terms"><span>Первая волна — {fh(h1)} ч</span><span>Вторая волна — {fh(h2)} ч</span><span>Мелкая правка — {fh(h3)} ч</span></div>
   </div>
   <div class="pbox alt" style="margin-top:18px">
     <span class="pill">Отдельно: блог-постинг</span>
@@ -242,7 +246,6 @@ end = f'''
   <img src="img/logo-md.png" alt="MileDevs">
   <h2>Следующий шаг</h2>
   <p>Согласуем первую волну и начинаем с неё — форма, экран благодарности, кнопка на телефоне и медиа, которые телефону не нужны. {h1} часов работы — и именно эта часть меняет количество заявок с того же трафика.</p>
-  <p class="fine">Все цифры измерены вживую на axyglobal.com 28 сентября 2026; экраны «Предлагаем» — ваши же страницы с одним изменённым элементом.</p>
 </section>
 </body>
 </html>
@@ -250,4 +253,4 @@ end = f'''
 
 html = head + cover + ''.join(S) + '\n' + strong + price + end
 open(os.path.join(ROOT, 'index.html'), 'w', encoding='utf-8').write(html)
-print('items', n_items, 'hours', H, money(H * RATE), 'waves', h1, h2, h3)
+print('items', n_items, 'hours', fh(H), money(H * RATE), 'waves', h1, h2, h3)
